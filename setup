@@ -1,0 +1,13 @@
+# !/bin/bash
+
+apt-get update
+apt-get -y install curl linux-tools-3.13.0-43-generic linux-tools-common
+
+# https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit
+curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+
+# Disable intel_pstate which remove Intel turbo boost
+# http://www.webupd8.org/2014/04/prevent-your-laptop-from-overheating.html
+# Good to read: https://bbs.archlinux.org/viewtopic.php?pid=1294415
+sed -i 's/intel_pstate=enable/intel_pstate=disable/' /etc/default/grub
+update-grub
