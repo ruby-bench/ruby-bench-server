@@ -6,6 +6,10 @@ apt-get -y install linux-tools-common task-spooler
 # https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit
 curl -sSL https://get.docker.com | sudo sh
 
+# Install docker-compose https://github.com/docker/compose/releases
+curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
 # Disable intel_pstate which remove Intel turbo boost
 # http://www.webupd8.org/2014/04/prevent-your-laptop-from-overheating.html
 # Good to read: https://bbs.archlinux.org/viewtopic.php?pid=1294415
