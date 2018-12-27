@@ -4,7 +4,7 @@ apt-get update
 apt-get -y install linux-tools-common task-spooler
 
 # https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit
-curl -sSL https://get.docker.com | sudo sh
+curl -sSL https://get.docker.com | sh
 
 # Install docker-compose https://github.com/docker/compose/releases
 curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
